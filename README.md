@@ -35,8 +35,8 @@ Each day's puzzle solution is organized in its own folder:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/advent-of-code-2024.git
-   cd advent-of-code-2024
+   git clone https://github.com/TheSergioHenrique/adventOfCode24.git
+   cd adventOfCode24
    ```
 
 2. Run the solution for a specific day:
