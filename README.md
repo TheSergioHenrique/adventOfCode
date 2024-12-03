@@ -29,6 +29,7 @@ Each day's puzzle solution is organized in its own folder:
 ├── day02/
 │   ├── ...
 ...
+```
 
 ### 🚀 How to Run
 
@@ -36,10 +37,11 @@ Each day's puzzle solution is organized in its own folder:
    ```bash
    git clone https://github.com/yourusername/advent-of-code-2024.git
    cd advent-of-code-2024
+   ```
 
 2. Run the solution for a specific day:
    ```bash
     python src/dayXX/solution.py
-
+   ```
 
 #❄️ Happy Holidays!
