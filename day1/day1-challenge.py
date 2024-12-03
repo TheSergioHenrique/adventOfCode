@@ -1,4 +1,4 @@
-filename = 'input.txt'  # Usando um nome de arquivo relativo
+filename = 'input.txt'
 
 def read_file(filename):
     left,right = [], []
