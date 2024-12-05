@@ -25,8 +25,9 @@ Each day's puzzle solution is organized in its own folder:
 ```plaintext
 📁 adventOfCode24
 ├── day01/
-│   ├── input.txt       # Puzzle input
-│   ├── day1.py         # Python solution
+│   ├── input.txt             # Puzzle input
+│   ├── day1.py               # Python solution
+│   ├── day1-challenge.py     # Python solution for the challenge
 ├── day02/
 │   ├── ...
 ...
@@ -42,7 +43,7 @@ Each day's puzzle solution is organized in its own folder:
 
 2. Run the solution for a specific day:
    ```bash
-    python src/dayXX/solution.py
+    python src/dayXX/dayX.py
    ```
 
 ---
