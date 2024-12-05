@@ -1,3 +1,4 @@
+  
 # 🎄 Advent of Code 2024 🎅
 
 Welcome to my **Advent of Code 2024** repository! 🌟 Each December, coders worldwide come together for a holiday-themed coding challenge, and this repo contains my solutions to the puzzles of this year.
@@ -22,7 +23,7 @@ Check out the challenges at [Advent of Code](https://adventofcode.com/2024).
 Each day's puzzle solution is organized in its own folder:
 
 ```plaintext
-📁 src
+📁 adventOfCode24
 ├── day01/
 │   ├── input.txt       # Puzzle input
 │   ├── solution.py     # Python solution
@@ -44,4 +45,6 @@ Each day's puzzle solution is organized in its own folder:
     python src/dayXX/solution.py
    ```
 
-##❄️ Happy Holidays!
+---
+# ✨🎄❄️Happy Holidays & Happy Coding!❄️🎄✨
+
