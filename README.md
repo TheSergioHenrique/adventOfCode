@@ -26,7 +26,7 @@ Each day's puzzle solution is organized in its own folder:
 📁 adventOfCode24
 ├── day01/
 │   ├── input.txt       # Puzzle input
-│   ├── solution.py     # Python solution
+│   ├── day1.py         # Python solution
 ├── day02/
 │   ├── ...
 ...
