@@ -47,5 +47,5 @@ Each day's puzzle solution is organized in its own folder:
    ```
 
 ---
-# ✨🎄❄️Happy Holidays & Happy Coding!❄️🎄✨
+# ✨🎄❄️🎅Happy Holidays & Happy Coding!🎅❄️🎄✨
 
