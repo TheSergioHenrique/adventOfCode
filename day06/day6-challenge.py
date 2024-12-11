@@ -1,4 +1,4 @@
-#THIS IS THE MOST AGGREGIOUS CODE I'VE EVER WROTE. LOOK AT THIS MESS.
+#THIS IS THE MOST EGREGIOUS CODE I'VE EVER WROTE. LOOK AT THIS MESS.
 def read_input(file_path):
     with open(file_path, 'r') as file:
         return file.read().splitlines()
