@@ -1,7 +1,7 @@
   
-# 🎄 Advent of Code 2024 🎅
+# 🎄 Advent of Code 🎅
 
-Welcome to my **Advent of Code 2024** repository! 🌟 Each December, coders worldwide come together for a holiday-themed coding challenge, and this repo contains my solutions to the puzzles of this year.
+Welcome to my **Advent of Code** repository! 🌟 Each December, coders worldwide come together for a holiday-themed coding challenge, and this repo contains my solutions to the puzzles.
 
 ---
 
@@ -14,7 +14,7 @@ Advent of Code is an annual set of Christmas-themed programming puzzles released
 - Compete with friends or the people worldwide 🎮
 - Celebrate the holidays! 🎉
 
-Check out the challenges at [Advent of Code](https://adventofcode.com/2024).
+Check out the challenges at [Advent of Code](https://adventofcode.com).
 
 ---
 
@@ -23,12 +23,13 @@ Check out the challenges at [Advent of Code](https://adventofcode.com/2024).
 Each day's puzzle solution is organized in its own folder:
 
 ```plaintext
-📁 adventOfCode24
-├── day01/
-│   ├── input.txt             # Puzzle input
-│   ├── day1.py               # Python solution
-│   ├── day1-challenge.py     # Python solution for the challenge
-├── day02/
+📁 adventOfCode
+├── year/
+├── ├── day01/
+│   ├── ├── input.txt             # Puzzle input
+│   ├── ├── day1.X               # Python solution
+│   ├── ├── day1-challenge.X     # Python solution for the challenge
+├── ├── day02/
 │   ├── ...
 ...
 ```
@@ -37,11 +38,11 @@ Each day's puzzle solution is organized in its own folder:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/TheSergioHenrique/adventOfCode24.git
-   cd adventOfCode24
+   git clone https://github.com/TheSergioHenrique/adventOfCode.git
+   cd adventOfCode
    ```
 
-2. Run the solution for a specific day:
+2. Run the solution for a specific day(If I solved it in python lol):
    ```bash
     python src/dayXX/dayX.py
    ```
