@@ -1,49 +1,52 @@
-from collections import deque, defaultdict
+from collections import deque
 
-def read_map(path):
-    # Read the input file and convert each line into a list of integers
+def read_height_map(path):
+    """
+    Reads the input file and returns a 2D list of integers.
+    """
     with open(path) as f:
         return [list(map(int, line.strip())) for line in f if line.strip()]
 
 def find_trailheads(grid):
-    # Trailheads are positions with height 0
-    return [(r, c) for r in range(len(grid)) for c in range(len(grid[0])) if grid[r][c] == 0]
+    """
+    Returns a list of (r,c) positions where grid[r][c] == 0.
+    """
+    heads = []
+    for r, row in enumerate(grid):
+        for c, h in enumerate(row):
+            if h == 0:
+                heads.append((r, c))
+    return heads
 
-def count_paths_from(trail_map, start):
-    rows, cols = len(trail_map), len(trail_map[0])
+def score_from_head(grid, start):
+    """
+    Breadth-First Search. Thanks, Data Structures lessons. 
+    """
+    R, C = len(grid), len(grid[0])
     sr, sc = start
-
-    # Tracks how many distinct paths reach each cell
-    path_counts = defaultdict(int)
-    path_counts[(sr, sc)] = 1
-
+    visited = set([(sr, sc)])
     q = deque([(sr, sc)])
-
+    reached_nines = set()
     while q:
         r, c = q.popleft()
-        h = trail_map[r][c]
-
-        # Explore neighbors that are exactly one level higher
-        for dr, dc in ((0, 1), (1, 0), (0, -1), (-1, 0)):
-            nr, nc = r + dr, c + dc
-            if 0 <= nr < rows and 0 <= nc < cols:
-                nh = trail_map[nr][nc]
+        h = grid[r][c]
+        for dr, dc in ((1,0),(-1,0),(0,1),(0,-1)):
+            nr, nc = r+dr, c+dc
+            if 0 <= nr < R and 0 <= nc < C and (nr, nc) not in visited:
+                nh = grid[nr][nc]
+                # only step if it’s exactly one higher
                 if nh == h + 1:
-                    if (nr, nc) not in path_counts:
-                        q.append((nr, nc))
-                    path_counts[(nr, nc)] += path_counts[(r, c)]
-
-    # Sum paths that reach any cell with height 9
-    return sum(v for (r, c), v in path_counts.items() if trail_map[r][c] == 9)
+                    visited.add((nr, nc))
+                    q.append((nr, nc))
+                    if nh == 9:
+                        reached_nines.add((nr, nc))
+    return len(reached_nines)
 
 def main():
-    trail_map = read_map('input.txt')
-    trailheads = find_trailheads(trail_map)
-
-    # For each trailhead, count how many unique paths reach height-9 cells
-    total_rating = sum(count_paths_from(trail_map, head) for head in trailheads)
-
-    print(f"Sum of all trailhead ratings = {total_rating}")
+    grid = read_height_map('input.txt')
+    heads = find_trailheads(grid)
+    total_score = sum(score_from_head(grid, h) for h in heads)
+    print("Sum of all trailhead scores =", total_score)
 
 if __name__ == "__main__":
     main()
