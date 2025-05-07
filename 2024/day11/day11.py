@@ -1,5 +1,5 @@
 import sys
-
+#CAUTION, IF YOU USE THIS ONE FOR THE SECOND CHALLENGE YOU WILL OVERFLOW.
 def blink(stones):
     # apply one blink according to rules.
     output = []
